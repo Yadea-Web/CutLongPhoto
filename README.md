@@ -1,5 +1,5 @@
 # CutLongPhoto
-Cut the long photo to print
+Cut the long picture to print
 
 
 It's Python!
@@ -10,8 +10,18 @@ This tool will help you!
 
 Maybe the last picture is empty, delete it!
 
-TODO:
-1. make some picture folder
+
+### Usage
+
+1. create `images/original` and `images/result` folder
+2. put long picture into `images/original`
+3. run 
+```
+python Cut.py
+```
+
+### TODO
+1. make pictures into one folder
 2. generate pdf
 
 and so on...
