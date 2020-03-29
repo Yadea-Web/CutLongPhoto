@@ -6,7 +6,7 @@ from PIL import Image
 
 def get_imlist(path):
     """返回目录中所有png图像的文件名列表"""
-    return [os.path.join(path,f) for f in os.listdir(path) if f.endswith(".PNG")]
+    return [os.path.join(path,f) for f in os.listdir(path) if (f.endswith(".PNG") | f.endswith(".JPG"))]
 
 def save_change(save_dir,n,x1,y1,x2,y2):
     box = (x1,y1,x2,y2)
@@ -20,14 +20,14 @@ def save_change(save_dir,n,x1,y1,x2,y2):
 
 if __name__ == "__main__":
 
-    path = "./股/原图/"
+    path = "./images/original/"
     listdir = get_imlist(path)
 
     Image.MAX_IMAGE_PIXELS = 2300000000
 
     for dir in listdir:
         infile = os.path.splitext(dir)[0]
-        infile = infile.replace("原图","截图后")
+        infile = infile.replace("original","result")
         save_dir = infile + "_"
         print save_dir
 
